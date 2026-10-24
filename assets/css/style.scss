@@ -1,0 +1,31 @@
+---
+---
+
+@import "{{ site.theme }}";
+
+/* Let the page use the full browser width instead of Primer's 1012px column */
+.container-lg {
+  max-width: 100%;
+  padding-left: 24px;
+  padding-right: 24px;
+}
+
+/* Stretch comparison tables across the full width */
+.markdown-body table {
+  display: table;
+  width: 100%;
+}
+
+/* On narrow screens, scroll the table sideways instead of squashing it */
+@media (max-width: 900px) {
+  .container-lg {
+    padding-left: 12px;
+    padding-right: 12px;
+  }
+
+  .markdown-body table {
+    display: block;
+    overflow-x: auto;
+    width: 100%;
+  }
+}
